@@ -10,19 +10,22 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* instead of height */
+      min-height: 150vh;
       margin: 0;
       background-color: #dfa4a4;
       font-family: 'Roboto', sans-serif;
-      overflow: hidden; /* instead of hidden */
+      overflow: auto;
     }
 
     .icon-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
+  position: fixed;   /* instead of relative */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* so you can still click the button */
+}
 
     .icon {
       position: absolute;
@@ -149,3 +152,4 @@
 </body>
 
 </html>
+
